@@ -34,7 +34,7 @@ function render(item: MenuItem, id: string) {
 		return (
 			<Menu.Item key={item.link}>
 				<Link to={item.link}>
-					<div>{item.title||item.name}</div>
+					<div>{item.title || item.name}</div>
 				</Link>
 			</Menu.Item>
 		)
@@ -42,7 +42,9 @@ function render(item: MenuItem, id: string) {
 		return (
 			<Menu.SubMenu
 				key={id}
-				title={<span style={{ fontWeight: 900 }}>{item.title||item.name}</span>}
+				title={
+					<span style={{ fontWeight: 900 }}>{item.title || item.name}</span>
+				}
 			>
 				{item.items && item.items.map((v, i) => render(v, id + '.' + i))}
 			</Menu.SubMenu>
@@ -74,7 +76,7 @@ export function Sidebar() {
 								relativePath
 								childMarkdownRemark {
 									frontmatter {
-									  title
+										title
 									}
 								}
 							}
