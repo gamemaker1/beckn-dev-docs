@@ -20,6 +20,10 @@ interface ParentItem {
 	items: MenuItem[]
 }
 
+function createLinkToFile(path: string): string {
+	return path.replace(/\.mdx?$/, '').replace(/index$/, '')
+}
+
 function isLinkItem(item: MenuItem): item is LinkItem {
 	const result = Boolean((item as LinkItem).link)
 	return result
@@ -61,6 +65,16 @@ export function Sidebar() {
 							}
 						}
 					}
+					allFile {
+						edges {
+							node {
+								id
+								name
+								relativeDirectory
+								relativePath
+							}
+						}
+					}
 				}
 			`}
 			render={(data) => {
@@ -70,23 +84,33 @@ export function Sidebar() {
 						: '/'
 				const currentSection = currentPath.split('/')[1]
 
-				const pages = data.allDirectory.edges.filter(
-					({ node }) => node.relativeDirectory === currentSection
-				)
+				const pages = [
+					...data.allDirectory.edges.filter(
+						({ node }) => node.relativeDirectory === currentSection
+					),
+					...data.allFile.edges.filter(
+						({ node }) => node.relativeDirectory === currentSection
+					),
+				]
 				const menuItems = pages.map(({ node }) => {
-					const subItems = data.allDirectory.edges.filter(
-						({ node: child }) => child.relativeDirectory === node.relativePath
-					)
+					const subItems = [
+						...data.allDirectory.edges.filter(
+							({ node: child }) => child.relativeDirectory === node.relativePath
+						),
+						...data.allFile.edges.filter(
+							({ node: child }) => child.relativeDirectory === node.relativePath
+						),
+					]
 
 					if (subItems.length !== 0) {
 						return {
 							id: node.id,
-							name: node.base,
+							name: node.base ?? node.name,
 							items: subItems.map(({ node: child }) => {
 								return {
 									id: child.id,
-									name: child.base,
-									link: `/${child.relativePath}`,
+									name: child.base ?? child.name,
+									link: `/${createLinkToFile(child.relativePath)}`,
 								}
 							}),
 						}
@@ -94,17 +118,10 @@ export function Sidebar() {
 
 					return {
 						id: node.id,
-						name: node.base,
-						link: `/${node.relativePath}`,
+						name: node.base ?? node.name,
+						link: `/${createLinkToFile(node.relativePath)}`,
 					}
 				})
-				if (menuItems.length === 0) {
-					menuItems.push({
-						id: currentSection,
-						name: currentSection,
-						link: currentPath,
-					})
-				}
 
 				const defaultOpenKeys = menuItems.map((item) => item.id)
 
