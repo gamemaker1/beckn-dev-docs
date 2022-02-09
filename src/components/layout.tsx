@@ -13,7 +13,9 @@ import { pathPrefix } from '../../gatsby-config'
 
 const { Sider, Content } = Layout
 
-export function RootLayout({ children }: React.PropsWithChildren<{}>) {
+// The root layout to render stuff inside
+// The sidebar, page content and header/navbar are all located within the root layout
+export const RootLayout = ({ children }: React.PropsWithChildren<{}>) => {
 	return (
 		<StaticQuery
 			query={graphql`
@@ -23,36 +25,9 @@ export function RootLayout({ children }: React.PropsWithChildren<{}>) {
 							title
 						}
 					}
-					allFile {
-						edges {
-							node {
-								name
-								relativePath
-							}
-						}
-					}
 				}
 			`}
 			render={(data) => {
-				const allPosts = data.allFile.edges.map(
-					(edge: any) => edge.node.relativePath
-				)
-				let onPostPage
-				if (typeof window !== 'undefined') {
-					const path = window.location.pathname.replace(
-						pathPrefix.slice(0, -1),
-						''
-					)
-					if (
-						allPosts.indexOf(path) >= 0 ||
-						allPosts.indexOf(path.slice(0, -1)) >= 0
-					) {
-						onPostPage = true
-					} else {
-						onPostPage = false
-					}
-				}
-
 				const { title } = data.site.siteMetadata
 
 				return (
