@@ -34,7 +34,7 @@ function render(item: MenuItem, id: string) {
 		return (
 			<Menu.Item key={item.link}>
 				<Link to={item.link}>
-					<div>{item.name}</div>
+					<div>{item.title || item.name}</div>
 				</Link>
 			</Menu.Item>
 		)
@@ -42,7 +42,9 @@ function render(item: MenuItem, id: string) {
 		return (
 			<Menu.SubMenu
 				key={id}
-				title={<span style={{ fontWeight: 900 }}>{item.name}</span>}
+				title={
+					<span style={{ fontWeight: 900 }}>{item.title || item.name}</span>
+				}
 			>
 				{item.items && item.items.map((v, i) => render(v, id + '.' + i))}
 			</Menu.SubMenu>
@@ -72,6 +74,11 @@ export function Sidebar() {
 								name
 								relativeDirectory
 								relativePath
+								childMarkdownRemark {
+									frontmatter {
+										title
+									}
+								}
 							}
 						}
 					}
@@ -105,6 +112,7 @@ export function Sidebar() {
 					if (subItems.length !== 0) {
 						return {
 							id: node.id,
+							title: node?.childMarkdownRemark?.frontmatter?.title,
 							name: node.base ?? node.name,
 							items: subItems.map(({ node: child }) => {
 								return {
@@ -118,6 +126,7 @@ export function Sidebar() {
 
 					return {
 						id: node.id,
+						title: node.childMarkdownRemark.frontmatter.title,
 						name: node.base ?? node.name,
 						link: `/${createLinkToFile(node.relativePath)}`,
 					}
