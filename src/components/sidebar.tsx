@@ -9,62 +9,66 @@ import { Affix, Menu } from 'antd'
 
 import { pathPrefix } from '../../gatsby-config'
 
-interface LinkItem {
+// An object representing a page to show on the sidebar
+interface PageMenuItem {
 	id: string
 	name: string
 	link: string
 }
-interface ParentItem {
+// An object representing a collapsible section of pages to show on the sidebar
+interface SectionMenuItem {
 	id: string
 	name: string
-	items: MenuItem[]
+	pages: MenuItem[]
 }
+// The menu is a list of items - either pages or sections
+type MenuItem = PageMenuItem | SectionMenuItem
 
-function createLinkToFile(path: string): string {
-	return path.replace(/\.mdx?$/, '').replace(/index$/, '')
-}
+const createLinkToFile = (path: string): string =>
+	path.replace(/\.mdx?$/, '').replace(/index$/, '')
+const isPageMenuItem = (item: MenuItem): item is PageMenuItem =>
+	typeof (item as PageMenuItem).link === 'string'
 
-function isLinkItem(item: MenuItem): item is LinkItem {
-	const result = Boolean((item as LinkItem).link)
-	return result
-}
-
-function render(item: MenuItem, id: string) {
-	if (isLinkItem(item)) {
+// A function to render a menu item depending on its type
+const renderMenuItem = (item: MenuItem, id: string) => {
+	if (isPageMenuItem(item)) {
+		// If it is a link to a page, just render it as a link
 		return (
 			<Menu.Item key={item.link}>
 				<Link to={item.link}>
-					<div>{item.title || item.name}</div>
+					<div>{item.title ?? item.name}</div>
 				</Link>
 			</Menu.Item>
 		)
 	} else {
+		// Else show a collapsible submenu, with all the subitems inside it
 		return (
 			<Menu.SubMenu
 				key={id}
-				title={
-					<span style={{ fontWeight: 900 }}>{item.title || item.name}</span>
-				}
+				title={<span style={{ fontWeight: 900 }}>{item.name}</span>}
 			>
-				{item.items && item.items.map((v, i) => render(v, id + '.' + i))}
+				{item.pages &&
+					item.pages.map((item, index) =>
+						renderMenuItem(item, id + '.' + item.id)
+					)}
 			</Menu.SubMenu>
 		)
 	}
 }
 
-export function Sidebar() {
-	return (
-		<StaticQuery
-			query={graphql`
-				query MyQuery {
-					allDirectory {
-						edges {
-							node {
-								id
-								base
-								relativeDirectory
-								relativePath
-							}
+// The sidebar
+export const Sidebar = () => (
+	<StaticQuery
+		// Make a query to retrieve all files and subdirectories in the `content/` folder
+		query={graphql`
+			query MyQuery {
+				allDirectory {
+					edges {
+						node {
+							id
+							base
+							relativeDirectory
+							relativePath
 						}
 					}
 					allFile(
@@ -82,76 +86,91 @@ export function Sidebar() {
 								childMarkdownRemark {
 									frontmatter {
 										title
+										order
 									}
 								}
 							}
 						}
 					}
 				}
-			`}
-			render={(data) => {
-				const currentPath =
-					typeof window !== 'undefined'
-						? window.location.pathname.replace(pathPrefix, '')
-						: '/'
-				const currentSection = currentPath.split('/')[1]
+			}
+		`}
+		render={(data) => {
+			// Get the section the user is viewing currently
+			// It should be either 'overview', 'reference', 'build-with-beckn' or 'projects'
+			const currentPath =
+				typeof window !== 'undefined'
+					? window.location.pathname.replace(pathPrefix, '')
+					: '/'
+			const currentSection = currentPath.split('/')[1]
 
-				const pages = [
+			// Get all of the files and subdirectories within the section
+			// For example, if the view is viewing the 'reference' section, get everything
+			// from the `content/reference` folder
+			const pages = [
+				...data.allDirectory.edges.filter(
+					({ node }) => node.relativeDirectory === currentSection
+				),
+				...data.allFile.edges.filter(
+					({ node }) => node.relativeDirectory === currentSection
+				),
+			]
+
+			// Turn that into a nice menu
+			const menuItems = pages.map(({ node }) => {
+				// Check if any files or subdirs are located inside this directory (if it is a
+				// file, the array will be empty)
+				const subItems = [
 					...data.allDirectory.edges.filter(
-						({ node }) => node.relativeDirectory === currentSection
+						({ node: child }) => child.relativeDirectory === node.relativePath
 					),
 					...data.allFile.edges.filter(
-						({ node }) => node.relativeDirectory === currentSection
+						({ node: child }) => child.relativeDirectory === node.relativePath
 					),
 				]
-				const menuItems = pages.map(({ node }) => {
-					const subItems = [
-						...data.allDirectory.edges.filter(
-							({ node: child }) => child.relativeDirectory === node.relativePath
-						),
-						...data.allFile.edges.filter(
-							({ node: child }) => child.relativeDirectory === node.relativePath
-						),
-					]
 
-					if (subItems.length !== 0) {
-						return {
-							id: node.id,
-							title: node?.childMarkdownRemark?.frontmatter?.title,
-							name: node.base ?? node.name,
-							items: subItems.map(({ node: child }) => {
-								return {
-									id: child.id,
-									name: child.base ?? child.name,
-									link: `/${createLinkToFile(child.relativePath)}`,
-								}
-							}),
-						}
-					}
-
+				if (subItems.length !== 0) {
+					// If there are sub items, return a `SectionMenuItem`
 					return {
 						id: node.id,
-						title: node.childMarkdownRemark.frontmatter.title,
-						name: node.base ?? node.name,
-						link: `/${createLinkToFile(node.relativePath)}`,
+						name:
+							node?.childMarkdownRemark?.frontmatter?.title ??
+							node.base ??
+							node.name,
+						items: subItems.map(({ node: child }) => {
+							return {
+								id: child.id,
+								name: child.base ?? child.name,
+								link: `/${createLinkToFile(child.relativePath)}`,
+							}
+						}),
 					}
-				})
+				}
 
-				const defaultOpenKeys = menuItems.map((item) => item.id)
+				// Else return a `PageMenuItem`
+				return {
+					id: node.id,
+					title: node.childMarkdownRemark.frontmatter.title,
+					name: node.base ?? node.name,
+					link: `/${createLinkToFile(node.relativePath)}`,
+				}
+			})
 
-				return (
-					<Affix>
-						<Menu
-							mode="inline"
-							style={{ minWidth: 250, height: '100%', borderRight: 0 }}
-							defaultOpenKeys={defaultOpenKeys}
-							selectedKeys={[currentPath]}
-						>
-							{menuItems.map((v) => render(v, v.id))}
-						</Menu>
-					</Affix>
-				)
-			}}
-		/>
-	)
-}
+			// Start out with all the sections un-collapsed
+			const defaultOpenKeys = menuItems.map((item) => item.id)
+
+			return (
+				<Affix>
+					<Menu
+						mode="inline"
+						style={{ minWidth: 250, height: '100%', borderRight: 0 }}
+						defaultOpenKeys={defaultOpenKeys}
+						selectedKeys={[currentPath]}
+					>
+						{menuItems.map((item) => renderMenuItem(item, item.id))}
+					</Menu>
+				</Affix>
+			)
+		}}
+	/>
+)

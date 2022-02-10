@@ -7,13 +7,22 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import { RootLayout as Layout } from '../components/layout'
 
-function PageTemplate({ data: { mdx } }: any) {
+export const PageTemplate = (content: {
+	data: {
+		mdx: {
+			body: string
+		}
+	}
+}) => {
+	// Render the page's contents within the Layout tag
 	return (
 		<Layout>
-			<MDXRenderer>{mdx.body}</MDXRenderer>
+			<MDXRenderer>{content.data.mdx.body}</MDXRenderer>
 		</Layout>
 	)
 }
+
+// The query needed to get the page data passed to the above component
 export const pageQuery = graphql`
 	query PageQuery($id: String) {
 		mdx(id: { eq: $id }) {

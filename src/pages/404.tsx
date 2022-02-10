@@ -9,7 +9,7 @@ const NotFoundPage = () => {
 		<div>
 			<h1>404</h1>
 			<p>
-				We couldn't find the page you are looking for.{' '}
+				We couldn't find the page you are looking for.
 				<Link to="/overview">Click here</Link> to go back home.
 			</p>
 		</div>
