@@ -1,5 +1,6 @@
 ---
 title: 'The Registry Infrastructure'
+order: 3
 ---
 
 # registry infrastructure layer
