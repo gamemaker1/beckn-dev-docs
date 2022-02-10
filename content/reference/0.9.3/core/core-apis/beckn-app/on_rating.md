@@ -25,9 +25,9 @@ order: 9
 
 | **Field** | **Type**                                                                             |
 | --------- | ------------------------------------------------------------------------------------ |
-| context\* | [ContextForOn_rating](/docs/core-specification/schema-reference/contextforon_rating) |
-| message   | [MessageForOn_rating](/docs/core-specification/schema-reference/messageforon_rating) |
-| error     | [Error](/docs/core-specification/schema-reference/error)                             |
+| context\* | [ContextForOn_rating](/reference/0.9.3/core/schema-reference/contextforon_rating) |
+| message   | [MessageForOn_rating](/reference/0.9.3/core/schema-reference/messageforon_rating) |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error)                             |
 
 ## Response
 
@@ -35,8 +35,8 @@ order: 9
 
 | **Field** | **Type**                                                 |
 | --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

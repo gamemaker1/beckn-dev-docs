@@ -4,9 +4,9 @@
 
 ##Schema Definition |**Field**|**Type**|**Description**|
 |---------|--------|---------------| |id|string|
-|descriptor|[Descriptor](/docs/core-specification/schema-reference/descriptor)|Describes
+|descriptor|[Descriptor](/reference/0.9.3/core/schema-reference/descriptor)|Describes
 the description of a real-world object. Maintained by Beckn Foundation
-|parent_policy_id|[Policy/properties/id](/docs/core-specification/schema-reference/policy)|
-|time|[Time](/docs/core-specification/schema-reference/time)|Describes time in
+|parent_policy_id|[Policy/properties/id](/reference/0.9.3/core/schema-reference/policy)|
+|time|[Time](/reference/0.9.3/core/schema-reference/time)|Describes time in
 its various forms. It can be a single point in time; duration; or a structured
 timetable of operations

@@ -26,8 +26,8 @@ order: 3
 
 | **Field** | **Type**                                                                   |
 | --------- | -------------------------------------------------------------------------- |
-| context\* | [ContextForInit](/docs/core-specification/schema-reference/contextforinit) |
-| message   | [MessageForInit](/docs/core-specification/schema-reference/messageforinit) |
+| context\* | [ContextForInit](/reference/0.9.3/core/schema-reference/contextforinit) |
+| message   | [MessageForInit](/reference/0.9.3/core/schema-reference/messageforinit) |
 
 ## Response
 
@@ -35,8 +35,8 @@ order: 3
 
 | **Field** | **Type**                                                 |
 | --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

@@ -25,7 +25,7 @@ order: 9
 
 | **Field**     | **Type**                                                                       |
 | ------------- | ------------------------------------------------------------------------------ |
-| context\*     | [ContextForRating](/docs/core-specification/schema-reference/contextforrating) |
+| context\*     | [ContextForRating](/reference/0.9.3/core/schema-reference/contextforrating) |
 | message.id    | string                                                                         |
 | message.value | integer                                                                        |
 
@@ -35,8 +35,8 @@ order: 9
 
 | **Field** | **Type**                                                 |
 | --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

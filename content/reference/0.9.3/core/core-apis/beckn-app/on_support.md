@@ -25,9 +25,9 @@ order: 10
 
 | **Field** | **Type**                                                                               |
 | --------- | -------------------------------------------------------------------------------------- |
-| context\* | [ContextForOn_support](/docs/core-specification/schema-reference/contextforon_support) |
-| message   | [MessageForOn_support](/docs/core-specification/schema-reference/messageforon_support) |
-| error     | [Error](/docs/core-specification/schema-reference/error)                               |
+| context\* | [ContextForOn_support](/reference/0.9.3/core/schema-reference/contextforon_support) |
+| message   | [MessageForOn_support](/reference/0.9.3/core/schema-reference/messageforon_support) |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error)                               |
 
 ## Response
 
@@ -35,8 +35,8 @@ order: 10
 
 | **Field** | **Type**                                                 |
 | --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

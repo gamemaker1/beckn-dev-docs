@@ -25,8 +25,8 @@ order: 2
 
 | **Field** | **Type**                                                                       |
 | --------- | ------------------------------------------------------------------------------ |
-| context\* | [ContextForSelect](/docs/core-specification/schema-reference/contextforselect) |
-| message   | [MessageForSelect](/docs/core-specification/schema-reference/messageforselect) |
+| context\* | [ContextForSelect](/reference/0.9.3/core/schema-reference/contextforselect) |
+| message   | [MessageForSelect](/reference/0.9.3/core/schema-reference/messageforselect) |
 
 ## Response
 
@@ -34,8 +34,8 @@ order: 2
 
 | **Field** | **Type**                                                 |
 | --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

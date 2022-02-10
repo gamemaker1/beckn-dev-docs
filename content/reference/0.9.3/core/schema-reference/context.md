@@ -4,12 +4,12 @@
 
 | ##Schema Definition | **Field**                                                  | **Type**      | **Description** |
 | ------------------- | ---------------------------------------------------------- | ------------- | --------------- |
-| domain              | [Domain](/docs/core-specification/schema-reference/domain) | Describes the |
+| domain              | [Domain](/reference/0.9.3/core/schema-reference/domain) | Describes the |
 
 domain of an object
-|country|[Country/properties/code](/docs/core-specification/schema-reference/country)|Country
+|country|[Country/properties/code](/reference/0.9.3/core/schema-reference/country)|Country
 code  
-|city|[City/properties/code](/docs/core-specification/schema-reference/city)|City
+|city|[City/properties/code](/reference/0.9.3/core/schema-reference/city)|City
 code |action|string|Defines the Beckn API call. Any actions other than the
 ennumerated actions are not supported by Beckn Protocol. Allowed values:search,
 select, init, confirm, update, status, track, cancel, rating, support,

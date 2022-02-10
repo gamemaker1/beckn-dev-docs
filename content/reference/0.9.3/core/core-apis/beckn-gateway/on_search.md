@@ -26,9 +26,9 @@ order: 2
 
 | **Field**       | **Type**                                                                             |
 | --------------- | ------------------------------------------------------------------------------------ |
-| context\*       | [ContextForOn_search](/docs/core-specification/schema-reference/contextforon_search) |
-| message.catalog | { [Catalog](/docs/core-specification/schema-reference/catalog) }                     |
-| error           | [Error](/docs/core-specification/schema-reference/error)                             |
+| context\*       | [ContextForOn_search](/reference/0.9.3/core/schema-reference/contextforon_search) |
+| message.catalog | { [Catalog](/reference/0.9.3/core/schema-reference/catalog) }                     |
+| error           | [Error](/reference/0.9.3/core/schema-reference/error)                             |
 
 ## Response
 
@@ -36,8 +36,8 @@ order: 2
 
 | **Field** | **Type**                                                 |
 | --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

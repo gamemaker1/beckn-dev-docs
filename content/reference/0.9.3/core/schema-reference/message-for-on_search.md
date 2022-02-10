@@ -6,4 +6,4 @@
 
 | **Field** | **Type**                                                     | **Description**         |
 | --------- | ------------------------------------------------------------ | ----------------------- |
-| catalog   | [Catalog](/docs/core-specification/schema-reference/catalog) | Describes a BPP catalog |
+| catalog   | [Catalog](/reference/0.9.3/core/schema-reference/catalog) | Describes a BPP catalog |

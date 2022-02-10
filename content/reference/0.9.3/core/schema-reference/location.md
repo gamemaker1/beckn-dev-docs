@@ -4,17 +4,17 @@
 
 ##Schema Definition |**Field**|**Type**|**Description**|
 |---------|--------|---------------| |id|string|
-|descriptor|[Descriptor](/docs/core-specification/schema-reference/descriptor)|Describes
+|descriptor|[Descriptor](/reference/0.9.3/core/schema-reference/descriptor)|Describes
 the description of a real-world object. Maintained by Beckn Foundation
-|gps|[Gps](/docs/core-specification/schema-reference/gps)|Describes a gps
+|gps|[Gps](/reference/0.9.3/core/schema-reference/gps)|Describes a gps
 coordinate
-|address|[Address](/docs/core-specification/schema-reference/address)|Describes
+|address|[Address](/reference/0.9.3/core/schema-reference/address)|Describes
 an address |station_code|string|
-|city|[City](/docs/core-specification/schema-reference/city)|Describes a city
-|country|[Country](/docs/core-specification/schema-reference/country)|Describes
+|city|[City](/reference/0.9.3/core/schema-reference/city)|Describes a city
+|country|[Country](/reference/0.9.3/core/schema-reference/country)|Describes
 a country.
-|circle|[Circle](/docs/core-specification/schema-reference/circle)|Describes a
+|circle|[Circle](/reference/0.9.3/core/schema-reference/circle)|Describes a
 circular area on the map |polygon|string| |3dspace|string|
-|time|[Time](/docs/core-specification/schema-reference/time)|Describes time in
+|time|[Time](/reference/0.9.3/core/schema-reference/time)|Describes time in
 its various forms. It can be a single point in time; duration; or a structured
 timetable of operations

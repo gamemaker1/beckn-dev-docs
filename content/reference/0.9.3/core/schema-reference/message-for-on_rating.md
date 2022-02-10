@@ -6,4 +6,4 @@
 
 | **Field** | **Type**                                                       | **Description**        |
 | --------- | -------------------------------------------------------------- | ---------------------- |
-| feedback  | [Feedback](/docs/core-specification/schema-reference/feedback) | Feedback for a service |
+| feedback  | [Feedback](/reference/0.9.3/core/schema-reference/feedback) | Feedback for a service |

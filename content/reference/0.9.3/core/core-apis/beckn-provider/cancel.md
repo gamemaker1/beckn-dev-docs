@@ -25,8 +25,8 @@ order: 7
 
 | **Field** | **Type**                                                                       |
 | --------- | ------------------------------------------------------------------------------ |
-| context\* | [ContextForCancel](/docs/core-specification/schema-reference/contextforcancel) |
-| message   | [MessageForCancel](/docs/core-specification/schema-reference/messageforcancel) |
+| context\* | [ContextForCancel](/reference/0.9.3/core/schema-reference/contextforcancel) |
+| message   | [MessageForCancel](/reference/0.9.3/core/schema-reference/messageforcancel) |
 
 ## Response
 
@@ -34,8 +34,8 @@ order: 7
 
 | **Field** | **Type**                                                 |
 | --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

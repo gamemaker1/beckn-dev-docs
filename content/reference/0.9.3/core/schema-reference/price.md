@@ -4,17 +4,17 @@
 
 ##Schema Definition |**Field**|**Type**|**Description**|
 |---------|--------|---------------| |currency|string|
-|value|[DecimalValue](/docs/core-specification/schema-reference/decimalvalue)|Describes
+|value|[DecimalValue](/reference/0.9.3/core/schema-reference/decimalvalue)|Describes
 a decimal value
-|estimated_value|[DecimalValue](/docs/core-specification/schema-reference/decimalvalue)|Describes
+|estimated_value|[DecimalValue](/reference/0.9.3/core/schema-reference/decimalvalue)|Describes
 a decimal value
-|computed_value|[DecimalValue](/docs/core-specification/schema-reference/decimalvalue)|Describes
+|computed_value|[DecimalValue](/reference/0.9.3/core/schema-reference/decimalvalue)|Describes
 a decimal value
-|listed_value|[DecimalValue](/docs/core-specification/schema-reference/decimalvalue)|Describes
+|listed_value|[DecimalValue](/reference/0.9.3/core/schema-reference/decimalvalue)|Describes
 a decimal value
-|offered_value|[DecimalValue](/docs/core-specification/schema-reference/decimalvalue)|Describes
+|offered_value|[DecimalValue](/reference/0.9.3/core/schema-reference/decimalvalue)|Describes
 a decimal value
-|minimum_value|[DecimalValue](/docs/core-specification/schema-reference/decimalvalue)|Describes
+|minimum_value|[DecimalValue](/reference/0.9.3/core/schema-reference/decimalvalue)|Describes
 a decimal value
-|maximum_value|[DecimalValue](/docs/core-specification/schema-reference/decimalvalue)|Describes
+|maximum_value|[DecimalValue](/reference/0.9.3/core/schema-reference/decimalvalue)|Describes
 a decimal value

@@ -25,9 +25,9 @@ order: 4
 
 | **Field** | **Type**                                                                               |
 | --------- | -------------------------------------------------------------------------------------- |
-| context\* | [ContextForOn_confirm](/docs/core-specification/schema-reference/contextforon_confirm) |
-| message   | [MessageForOn_confirm](/docs/core-specification/schema-reference/messageforon_confirm) |
-| error     | [Error](/docs/core-specification/schema-reference/error)                               |
+| context\* | [ContextForOn_confirm](/reference/0.9.3/core/schema-reference/contextforon_confirm) |
+| message   | [MessageForOn_confirm](/reference/0.9.3/core/schema-reference/messageforon_confirm) |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error)                               |
 
 ## Response
 
@@ -35,8 +35,8 @@ order: 4
 
 | **Field** | **Type**                                                 |
 | --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

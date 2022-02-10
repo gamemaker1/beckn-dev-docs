@@ -25,9 +25,9 @@ order: 8
 
 | **Field** | **Type**                                                                             |
 | --------- | ------------------------------------------------------------------------------------ |
-| context\* | [ContextForOn_update](/docs/core-specification/schema-reference/contextforon_update) |
-| message   | [MessageForOn_update](/docs/core-specification/schema-reference/messageforon_update) |
-| error     | [Error](/docs/core-specification/schema-reference/error)                             |
+| context\* | [ContextForOn_update](/reference/0.9.3/core/schema-reference/contextforon_update) |
+| message   | [MessageForOn_update](/reference/0.9.3/core/schema-reference/messageforon_update) |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error)                             |
 
 ## Response
 
@@ -35,8 +35,8 @@ order: 8
 
 | **Field** | **Type**                                                 |
 | --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

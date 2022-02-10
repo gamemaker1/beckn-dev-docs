@@ -25,8 +25,8 @@ order: 5
 
 | **Field** | **Type**                                                                       |
 | --------- | ------------------------------------------------------------------------------ |
-| context\* | [ContextForStatus](/docs/core-specification/schema-reference/contextforstatus) |
-| message   | [MessageForStatus](/docs/core-specification/schema-reference/messageforstatus) |
+| context\* | [ContextForStatus](/reference/0.9.3/core/schema-reference/contextforstatus) |
+| message   | [MessageForStatus](/reference/0.9.3/core/schema-reference/messageforstatus) |
 
 ## Response
 
@@ -34,8 +34,8 @@ order: 5
 
 | **Field** | **Type**                                                 |
 | --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

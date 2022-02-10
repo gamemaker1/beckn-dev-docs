@@ -6,4 +6,4 @@
 
 | **Field** | **Type**                                                 | **Description**                   |
 | --------- | -------------------------------------------------------- | --------------------------------- |
-| order     | [Order](/docs/core-specification/schema-reference/order) | Describes the details of an order |
+| order     | [Order](/reference/0.9.3/core/schema-reference/order) | Describes the details of an order |

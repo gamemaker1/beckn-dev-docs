@@ -6,4 +6,4 @@
 
 | **Field** | **Type**                                                       | **Description**                          |
 | --------- | -------------------------------------------------------------- | ---------------------------------------- |
-| tracking  | [Tracking](/docs/core-specification/schema-reference/tracking) | Describes the tracking info of an object |
+| tracking  | [Tracking](/reference/0.9.3/core/schema-reference/tracking) | Describes the tracking info of an object |

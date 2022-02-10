@@ -6,4 +6,4 @@
 
 | **Field** | **Type**                                                   | **Description**                                   |
 | --------- | ---------------------------------------------------------- | ------------------------------------------------- |
-| intent    | [Intent](/docs/core-specification/schema-reference/intent) | Intent of a user. Used for searching for services |
+| intent    | [Intent](/reference/0.9.3/core/schema-reference/intent) | Intent of a user. Used for searching for services |
