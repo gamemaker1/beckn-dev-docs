@@ -5,6 +5,6 @@
 
 ##Schema Definition |**Field**|**Type**|**Description**|
 |---------|--------|---------------| |label|string| |timestamp|string|
-|duration|[Duration](/docs/core-specification/schema-reference/duration)|Describes
+|duration|[Duration](/reference/0.9.3/core/schema-reference/duration)|Describes
 duration  
 |range|object| |days|string|comma separated values representing days of the week

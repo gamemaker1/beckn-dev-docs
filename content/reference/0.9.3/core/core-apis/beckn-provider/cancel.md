@@ -23,19 +23,19 @@ order: 7
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                       |
-| --------- | ------------------------------------------------------------------------------ |
-| context\* | [ContextForCancel](/docs/core-specification/schema-reference/contextforcancel) |
-| message   | [MessageForCancel](/docs/core-specification/schema-reference/messageforcancel) |
+| **Field** | **Type**                                                                    |
+| --------- | --------------------------------------------------------------------------- |
+| context\* | [ContextForCancel](/reference/0.9.3/core/schema-reference/contextforcancel) |
+| message   | [MessageForCancel](/reference/0.9.3/core/schema-reference/messageforcancel) |
 
 ## Response
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

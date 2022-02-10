@@ -23,19 +23,19 @@ order: 6
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                     |
-| --------- | ---------------------------------------------------------------------------- |
-| context\* | [ContextForTrack](/docs/core-specification/schema-reference/contextfortrack) |
-| message   | [MessageForTrack](/docs/core-specification/schema-reference/messagefortrack) |
+| **Field** | **Type**                                                                  |
+| --------- | ------------------------------------------------------------------------- |
+| context\* | [ContextForTrack](/reference/0.9.3/core/schema-reference/contextfortrack) |
+| message   | [MessageForTrack](/reference/0.9.3/core/schema-reference/messagefortrack) |
 
 ## Response
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

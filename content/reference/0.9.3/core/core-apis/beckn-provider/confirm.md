@@ -24,19 +24,19 @@ order: 4
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                         |
-| --------- | -------------------------------------------------------------------------------- |
-| context\* | [ContextForContext](/docs/core-specification/schema-reference/contextforcontext) |
-| message   | [MessageForConfirm](/docs/core-specification/schema-reference/messageforconfirm) |
+| **Field** | **Type**                                                                      |
+| --------- | ----------------------------------------------------------------------------- |
+| context\* | [ContextForContext](/reference/0.9.3/core/schema-reference/contextforcontext) |
+| message   | [MessageForConfirm](/reference/0.9.3/core/schema-reference/messageforconfirm) |
 
 ## Response
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

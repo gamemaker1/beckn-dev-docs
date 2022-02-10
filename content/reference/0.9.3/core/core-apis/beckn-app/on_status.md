@@ -23,20 +23,20 @@ order: 5
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                             |
-| --------- | ------------------------------------------------------------------------------------ |
-| context\* | [ContextForOn_status](/docs/core-specification/schema-reference/contextforon_status) |
-| message   | [MessageForOn_status](/docs/core-specification/schema-reference/messageforon_status) |
-| error     | [Error](/docs/core-specification/schema-reference/error)                             |
+| **Field** | **Type**                                                                          |
+| --------- | --------------------------------------------------------------------------------- |
+| context\* | [ContextForOn_status](/reference/0.9.3/core/schema-reference/contextforon_status) |
+| message   | [MessageForOn_status](/reference/0.9.3/core/schema-reference/messageforon_status) |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error)                             |
 
 ## Response
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

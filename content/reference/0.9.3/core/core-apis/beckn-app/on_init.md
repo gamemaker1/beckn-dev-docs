@@ -24,20 +24,20 @@ order: 3
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                         |
-| --------- | -------------------------------------------------------------------------------- |
-| context\* | [ContextForOn_init](/docs/core-specification/schema-reference/contextforon_init) |
-| message   | [MessageForOn_init](/docs/core-specification/schema-reference/messageforon_init) |
-| error     | [Error](/docs/core-specification/schema-reference/error)                         |
+| **Field** | **Type**                                                                      |
+| --------- | ----------------------------------------------------------------------------- |
+| context\* | [ContextForOn_init](/reference/0.9.3/core/schema-reference/contextforon_init) |
+| message   | [MessageForOn_init](/reference/0.9.3/core/schema-reference/messageforon_init) |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error)                         |
 
 ## Response
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

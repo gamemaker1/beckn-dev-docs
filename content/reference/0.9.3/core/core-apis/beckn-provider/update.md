@@ -24,19 +24,19 @@ order: 8
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                       |
-| --------- | ------------------------------------------------------------------------------ |
-| context\* | [ContextForUpdate](/docs/core-specification/schema-reference/contextforupdate) |
-| message   | [MessageForUpdate](/docs/core-specification/schema-reference/messageforupdate) |
+| **Field** | **Type**                                                                    |
+| --------- | --------------------------------------------------------------------------- |
+| context\* | [ContextForUpdate](/reference/0.9.3/core/schema-reference/contextforupdate) |
+| message   | [MessageForUpdate](/reference/0.9.3/core/schema-reference/messageforupdate) |
 
 ## Response
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
-| message\* | { [Ack](/docs/core-specification/schema-reference/ack) } |
-| error     | [Error](/docs/core-specification/schema-reference/error) |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
+| message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
+| error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
 ### Response Codes
 

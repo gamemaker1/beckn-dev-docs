@@ -4,6 +4,6 @@
 
 ##Schema Definition
 
-| **Field** | **Type**                                                       | **Description**        |
-| --------- | -------------------------------------------------------------- | ---------------------- |
-| feedback  | [Feedback](/docs/core-specification/schema-reference/feedback) | Feedback for a service |
+| **Field** | **Type**                                                    | **Description**        |
+| --------- | ----------------------------------------------------------- | ---------------------- |
+| feedback  | [Feedback](/reference/0.9.3/core/schema-reference/feedback) | Feedback for a service |

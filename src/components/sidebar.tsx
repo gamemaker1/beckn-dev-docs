@@ -30,13 +30,13 @@ const isPageMenuItem = (item: MenuItem): item is PageMenuItem =>
 	typeof (item as PageMenuItem).link === 'string'
 
 // A function to render a menu item depending on its type
-const renderMenuItem = (item: MenuItem, id: string) => {
+const renderMenuItem = (item: MenuItem) => {
 	if (isPageMenuItem(item)) {
 		// If it is a link to a page, just render it as a link
 		return (
 			<Menu.Item key={item.link}>
 				<Link to={item.link}>
-					<div>{item.title ?? item.name}</div>
+					<div>{item.name}</div>
 				</Link>
 			</Menu.Item>
 		)
@@ -44,12 +44,12 @@ const renderMenuItem = (item: MenuItem, id: string) => {
 		// Else show a collapsible submenu, with all the subitems inside it
 		return (
 			<Menu.SubMenu
-				key={id}
+				key={item.id}
 				title={<span style={{ fontWeight: 900 }}>{item.name}</span>}
 			>
 				{item.pages &&
-					item.pages.map((item, index) =>
-						renderMenuItem(item, id + '.' + item.id)
+					item.pages.map((page, index) =>
+						renderMenuItem(page, item.id + '.' + page.id)
 					)}
 			</Menu.SubMenu>
 		)
@@ -117,7 +117,7 @@ export const Sidebar = () => (
 			]
 
 			// Turn that into a nice menu
-			const menuItems = pages.map(({ node }) => {
+			const createMenuItems = ({ node }) => {
 				// Check if any files or subdirs are located inside this directory (if it is a
 				// file, the array will be empty)
 				const subItems = [
@@ -128,36 +128,45 @@ export const Sidebar = () => (
 						({ node: child }) => child.relativeDirectory === node.relativePath
 					),
 				]
+				const nodeId = node.id
+				const pageTitle = !node.childMarkdownRemark?.frontmatter?.title
+					? node.base ?? node.name
+					: node.childMarkdownRemark.frontmatter.title
 
 				if (subItems.length !== 0) {
 					// If there are sub items, return a `SectionMenuItem`
 					return {
-						id: node.id,
-						name:
-							node?.childMarkdownRemark?.frontmatter?.title ??
-							node.base ??
-							node.name,
-						items: subItems.map(({ node: child }) => {
-							return {
-								id: child.id,
-								name: child.base ?? child.name,
-								link: `/${createLinkToFile(child.relativePath)}`,
-							}
-						}),
+						id: nodeId,
+						name: pageTitle,
+						pages: subItems.map(createMenuItems),
 					}
 				}
 
 				// Else return a `PageMenuItem`
 				return {
-					id: node.id,
-					title: node.childMarkdownRemark.frontmatter.title,
-					name: node.base ?? node.name,
+					id: nodeId,
+					name: pageTitle,
 					link: `/${createLinkToFile(node.relativePath)}`,
 				}
-			})
+			}
+			const menuItems = pages.map(createMenuItems)
 
-			// Start out with all the sections un-collapsed
-			const defaultOpenKeys = menuItems.map((item) => item.id)
+			// Compute the current path, and uncollapse all the sections that lead
+			// to it
+			let parentSections = currentPath.split('/')
+			parentSections.pop()
+			parentSections = parentSections.slice(1)
+			const defaultOpenKeys = parentSections
+				.map((_, index) =>
+					parentSections
+						.slice(0, index + 1)
+						.reduce((pathSoFar, nextFolder) => pathSoFar + '/' + nextFolder)
+				)
+				.map((path) => {
+					return data.allDirectory.edges.find(
+						({ node }) => node.relativePath === path
+					)?.node?.id
+				})
 
 			return (
 				<Affix>
@@ -165,7 +174,7 @@ export const Sidebar = () => (
 						mode="inline"
 						style={{ minWidth: 250, height: '100%', borderRight: 0 }}
 						defaultOpenKeys={defaultOpenKeys}
-						selectedKeys={[currentPath]}
+						selectedKeys={[createLinkToFile(currentPath)]}
 					>
 						{menuItems.map((item) => renderMenuItem(item, item.id))}
 					</Menu>
