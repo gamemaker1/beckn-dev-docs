@@ -12,6 +12,6 @@ the payment details will be sent as url params. Two url param values,
 |tl_method|string|Allowed values:http/get, http/post |params|object|Object
 containg the parameters of payment. |type|string| Type of payments
 |status|string|Status of the payment
-|time|[Time](/reference/0.9.3/core/schema-reference/time)|Describes time in
-its various forms. It can be a single point in time; duration; or a structured
+|time|[Time](/reference/0.9.3/core/schema-reference/time)|Describes time in its
+various forms. It can be a single point in time; duration; or a structured
 timetable of operations

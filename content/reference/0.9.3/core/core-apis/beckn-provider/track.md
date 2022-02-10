@@ -23,8 +23,8 @@ order: 6
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                     |
-| --------- | ---------------------------------------------------------------------------- |
+| **Field** | **Type**                                                                  |
+| --------- | ------------------------------------------------------------------------- |
 | context\* | [ContextForTrack](/reference/0.9.3/core/schema-reference/contextfortrack) |
 | message   | [MessageForTrack](/reference/0.9.3/core/schema-reference/messagefortrack) |
 
@@ -32,8 +32,8 @@ order: 6
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 

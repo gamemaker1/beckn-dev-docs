@@ -2,8 +2,8 @@
 
 > Describes a beckn message context
 
-| ##Schema Definition | **Field**                                                  | **Type**      | **Description** |
-| ------------------- | ---------------------------------------------------------- | ------------- | --------------- |
+| ##Schema Definition | **Field**                                               | **Type**      | **Description** |
+| ------------------- | ------------------------------------------------------- | ------------- | --------------- |
 | domain              | [Domain](/reference/0.9.3/core/schema-reference/domain) | Describes the |
 
 domain of an object

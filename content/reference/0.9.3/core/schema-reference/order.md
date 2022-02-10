@@ -11,11 +11,11 @@ Array of item ids
 Array of add on ids
 |offers|[[Offer/properties/id](/reference/0.9.3/core/schema-reference/[offer)]|
 Array of offer ids
-|billing|[Billing](/reference/0.9.3/core/schema-reference/billing)|Describes
-a billing event
+|billing|[Billing](/reference/0.9.3/core/schema-reference/billing)|Describes a
+billing event
 |fulfillment|[Fulfillment](/reference/0.9.3/core/schema-reference/fulfillment)|Describes
 how a single product/service will be rendered/fulfilled to the end customer
-|quote|[Quotation](/reference/0.9.3/core/schema-reference/quotation)|Describes
-a quote
-|payment|[Payment](/reference/0.9.3/core/schema-reference/payment)|Describes
-a payment |created_at|string| |updated_at|string|
+|quote|[Quotation](/reference/0.9.3/core/schema-reference/quotation)|Describes a
+quote
+|payment|[Payment](/reference/0.9.3/core/schema-reference/payment)|Describes a
+payment |created_at|string| |updated_at|string|

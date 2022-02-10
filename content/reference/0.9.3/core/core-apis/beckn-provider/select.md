@@ -23,8 +23,8 @@ order: 2
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                       |
-| --------- | ------------------------------------------------------------------------------ |
+| **Field** | **Type**                                                                    |
+| --------- | --------------------------------------------------------------------------- |
 | context\* | [ContextForSelect](/reference/0.9.3/core/schema-reference/contextforselect) |
 | message   | [MessageForSelect](/reference/0.9.3/core/schema-reference/messageforselect) |
 
@@ -32,8 +32,8 @@ order: 2
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 

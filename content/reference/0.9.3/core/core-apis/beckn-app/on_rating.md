@@ -23,8 +23,8 @@ order: 9
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                             |
-| --------- | ------------------------------------------------------------------------------------ |
+| **Field** | **Type**                                                                          |
+| --------- | --------------------------------------------------------------------------------- |
 | context\* | [ContextForOn_rating](/reference/0.9.3/core/schema-reference/contextforon_rating) |
 | message   | [MessageForOn_rating](/reference/0.9.3/core/schema-reference/messageforon_rating) |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error)                             |
@@ -33,8 +33,8 @@ order: 9
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 

@@ -24,8 +24,8 @@ order: 8
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                       |
-| --------- | ------------------------------------------------------------------------------ |
+| **Field** | **Type**                                                                    |
+| --------- | --------------------------------------------------------------------------- |
 | context\* | [ContextForUpdate](/reference/0.9.3/core/schema-reference/contextforupdate) |
 | message   | [MessageForUpdate](/reference/0.9.3/core/schema-reference/messageforupdate) |
 
@@ -33,8 +33,8 @@ order: 8
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 

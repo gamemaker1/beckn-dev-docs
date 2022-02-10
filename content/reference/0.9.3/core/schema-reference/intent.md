@@ -27,12 +27,12 @@ a tag. This is a simple key-value store which is used to contain extended
 metadata
 |fulfillment.vehicle|[Vehicle](/reference/0.9.3/core/schema-reference/vehicle)|Describes
 the properties of a vehicle used in a mobility service
-|payment|[Payment](/reference/0.9.3/core/schema-reference/payment)|Describes
-a payment
+|payment|[Payment](/reference/0.9.3/core/schema-reference/payment)|Describes a
+payment
 |category|[Category](/reference/0.9.3/core/schema-reference/category)|Describes
 a category
-|offer|[Offer](/reference/0.9.3/core/schema-reference/offer)|Describes an
-offer |item|[Item](/reference/0.9.3/core/schema-reference/item)|Describes an
-item. Allows for domain extension.
-|tags|[Tags](/reference/0.9.3/core/schema-reference/tags)|Describes a tag.
-This is a simple key-value store which is used to contain extended metadata
+|offer|[Offer](/reference/0.9.3/core/schema-reference/offer)|Describes an offer
+|item|[Item](/reference/0.9.3/core/schema-reference/item)|Describes an item.
+Allows for domain extension.
+|tags|[Tags](/reference/0.9.3/core/schema-reference/tags)|Describes a tag. This
+is a simple key-value store which is used to contain extended metadata

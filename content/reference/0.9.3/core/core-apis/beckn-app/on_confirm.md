@@ -23,8 +23,8 @@ order: 4
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                               |
-| --------- | -------------------------------------------------------------------------------------- |
+| **Field** | **Type**                                                                            |
+| --------- | ----------------------------------------------------------------------------------- |
 | context\* | [ContextForOn_confirm](/reference/0.9.3/core/schema-reference/contextforon_confirm) |
 | message   | [MessageForOn_confirm](/reference/0.9.3/core/schema-reference/messageforon_confirm) |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error)                               |
@@ -33,8 +33,8 @@ order: 4
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 

@@ -23,8 +23,8 @@ order: 5
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                       |
-| --------- | ------------------------------------------------------------------------------ |
+| **Field** | **Type**                                                                    |
+| --------- | --------------------------------------------------------------------------- |
 | context\* | [ContextForStatus](/reference/0.9.3/core/schema-reference/contextforstatus) |
 | message   | [MessageForStatus](/reference/0.9.3/core/schema-reference/messageforstatus) |
 
@@ -32,8 +32,8 @@ order: 5
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 

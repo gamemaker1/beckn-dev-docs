@@ -23,8 +23,8 @@ order: 1
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                       |
-| --------- | ------------------------------------------------------------------------------ |
+| **Field** | **Type**                                                                    |
+| --------- | --------------------------------------------------------------------------- |
 | context\* | [ContextForSearch](/reference/0.9.3/core/schema-reference/contextforsearch) |
 | message   | [MessageForSearch](/reference/0.9.3/core/schema-reference/messageforsearch) |
 
@@ -32,8 +32,8 @@ order: 1
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 

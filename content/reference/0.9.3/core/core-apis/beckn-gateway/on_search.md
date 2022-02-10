@@ -24,8 +24,8 @@ order: 2
 
 ### Request Body Schema
 
-| **Field**       | **Type**                                                                             |
-| --------------- | ------------------------------------------------------------------------------------ |
+| **Field**       | **Type**                                                                          |
+| --------------- | --------------------------------------------------------------------------------- |
 | context\*       | [ContextForOn_search](/reference/0.9.3/core/schema-reference/contextforon_search) |
 | message.catalog | { [Catalog](/reference/0.9.3/core/schema-reference/catalog) }                     |
 | error           | [Error](/reference/0.9.3/core/schema-reference/error)                             |
@@ -34,8 +34,8 @@ order: 2
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 

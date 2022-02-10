@@ -23,18 +23,18 @@ order: 9
 
 ### Request Body Schema
 
-| **Field**     | **Type**                                                                       |
-| ------------- | ------------------------------------------------------------------------------ |
+| **Field**     | **Type**                                                                    |
+| ------------- | --------------------------------------------------------------------------- |
 | context\*     | [ContextForRating](/reference/0.9.3/core/schema-reference/contextforrating) |
-| message.id    | string                                                                         |
-| message.value | integer                                                                        |
+| message.id    | string                                                                      |
+| message.value | integer                                                                     |
 
 ## Response
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 

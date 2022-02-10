@@ -24,8 +24,8 @@ order: 4
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                         |
-| --------- | -------------------------------------------------------------------------------- |
+| **Field** | **Type**                                                                      |
+| --------- | ----------------------------------------------------------------------------- |
 | context\* | [ContextForContext](/reference/0.9.3/core/schema-reference/contextforcontext) |
 | message   | [MessageForConfirm](/reference/0.9.3/core/schema-reference/messageforconfirm) |
 
@@ -33,8 +33,8 @@ order: 4
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 

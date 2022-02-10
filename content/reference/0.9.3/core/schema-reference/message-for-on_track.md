@@ -4,6 +4,6 @@
 
 ##Schema Definition
 
-| **Field** | **Type**                                                       | **Description**                          |
-| --------- | -------------------------------------------------------------- | ---------------------------------------- |
+| **Field** | **Type**                                                    | **Description**                          |
+| --------- | ----------------------------------------------------------- | ---------------------------------------- |
 | tracking  | [Tracking](/reference/0.9.3/core/schema-reference/tracking) | Describes the tracking info of an object |

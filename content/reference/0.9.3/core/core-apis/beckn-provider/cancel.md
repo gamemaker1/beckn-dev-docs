@@ -23,8 +23,8 @@ order: 7
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                       |
-| --------- | ------------------------------------------------------------------------------ |
+| **Field** | **Type**                                                                    |
+| --------- | --------------------------------------------------------------------------- |
 | context\* | [ContextForCancel](/reference/0.9.3/core/schema-reference/contextforcancel) |
 | message   | [MessageForCancel](/reference/0.9.3/core/schema-reference/messageforcancel) |
 
@@ -32,8 +32,8 @@ order: 7
 
 ### Response Body Schema
 
-| **Field** | **Type**                                                 |
-| --------- | -------------------------------------------------------- |
+| **Field** | **Type**                                              |
+| --------- | ----------------------------------------------------- |
 | message\* | { [Ack](/reference/0.9.3/core/schema-reference/ack) } |
 | error     | [Error](/reference/0.9.3/core/schema-reference/error) |
 
