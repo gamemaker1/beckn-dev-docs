@@ -4,7 +4,7 @@
 
 ##Schema Definition
 
-| **Field** | **Type** | **Description**                         |
-| --------- | -------- | --------------------------------------- |
-| id        | string   | Id of the item to be rated              |
-| value     | integer  | rating value<br> maximum: 5, minimum: 1 |
+| **Field** | **Type** | **Description**                          |
+| --------- | -------- | ---------------------------------------- |
+| id        | string   | Id of the item to be rated               |
+| value     | integer  | rating value<br/> maximum: 5, minimum: 1 |
