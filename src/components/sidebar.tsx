@@ -67,7 +67,12 @@ export function Sidebar() {
 							}
 						}
 					}
-					allFile {
+					allFile(
+						sort: {
+							order: ASC
+							fields: childMarkdownRemark___frontmatter___order
+						}
+					) {
 						edges {
 							node {
 								id
