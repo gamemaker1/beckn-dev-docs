@@ -2,9 +2,10 @@
 
 > Describes a beckn message context
 
-##Schema Definition |**Field**|**Type**|**Description**|
-|---------|--------|---------------|
-|domain|[Domain](/docs/core-specification/schema-reference/domain)|Describes the
+| ##Schema Definition | **Field**                                                  | **Type**      | **Description** |
+| ------------------- | ---------------------------------------------------------- | ------------- | --------------- |
+| domain              | [Domain](/docs/core-specification/schema-reference/domain) | Describes the |
+
 domain of an object
 |country|[Country/properties/code](/docs/core-specification/schema-reference/country)|Country
 code  

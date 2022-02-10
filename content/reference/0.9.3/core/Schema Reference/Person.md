@@ -2,9 +2,10 @@
 
 > Describes a person. Extension not allowed
 
-##Schema Definition |**Field**|**Type**|**Description**|
-|---------|--------|---------------|
-|name|[Name](/docs/core-specification/schema-reference/name)|Describes the name
+| ##Schema Definition | **Field**                                              | **Type**           | **Description** |
+| ------------------- | ------------------------------------------------------ | ------------------ | --------------- |
+| name                | [Name](/docs/core-specification/schema-reference/name) | Describes the name |
+
 of a person in format:
 ./{given_name}/{honorific_prefix}/{first_name}/{middle_name}/{last_name}/{honorific_suffix}
 |image|[Image](/docs/core-specification/schema-reference/image)|Image of an
