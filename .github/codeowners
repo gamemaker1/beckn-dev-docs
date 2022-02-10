@@ -1,0 +1,14 @@
+# .github/codeowners
+# This file tells you who mantains a certain portion of the code.
+# A PR that touches the files in a certain section requires the
+# approval of that user.
+
+# Global owner - but is overriden by section-specific rules
+*            @gamemaker1
+
+# All documentation content is managed by @techframewirk, please
+# get PRs that touch docs content approved by them before merging.
+content/     @techframewirk
+
+# Code is managed mostly by @gamemaker1.
+src/         @gamemaker1
