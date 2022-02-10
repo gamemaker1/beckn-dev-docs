@@ -1,16 +1,22 @@
-# Cancel
+---
+title: Init
+order: 3
+---
 
-> Cancel an order
+# Init
+
+> Initialize an order by providing billing and/or shipping details
 
 ## Overview
 
-> The BAP will send the order id to cancel the order
+> The BAP will send the billing and/or shipping details the BPP to initialize
+> the order
 
 ## Request
 
 ### URL
 
-> /cancel
+> /init
 
 ### Method
 
@@ -18,10 +24,10 @@
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                       |
-| --------- | ------------------------------------------------------------------------------ |
-| context\* | [ContextForCancel](/docs/core-specification/schema-reference/contextforcancel) |
-| message   | [MessageForCancel](/docs/core-specification/schema-reference/messageforcancel) |
+| **Field** | **Type**                                                                   |
+| --------- | -------------------------------------------------------------------------- |
+| context\* | [ContextForInit](/docs/core-specification/schema-reference/contextforinit) |
+| message   | [MessageForInit](/docs/core-specification/schema-reference/messageforinit) |
 
 ## Response
 

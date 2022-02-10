@@ -1,16 +1,21 @@
-# Track
+---
+title: Cancel
+order: 7
+---
 
-> Track an active order
+# Cancel
+
+> Cancel an order
 
 ## Overview
 
-> The BAP will send the order id to get the tracking details of the order
+> The BAP will send the order id to cancel the order
 
 ## Request
 
 ### URL
 
-> /track
+> /cancel
 
 ### Method
 
@@ -18,10 +23,10 @@
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                     |
-| --------- | ---------------------------------------------------------------------------- |
-| context\* | [ContextForTrack](/docs/core-specification/schema-reference/contextfortrack) |
-| message   | [MessageForTrack](/docs/core-specification/schema-reference/messagefortrack) |
+| **Field** | **Type**                                                                       |
+| --------- | ------------------------------------------------------------------------------ |
+| context\* | [ContextForCancel](/docs/core-specification/schema-reference/contextforcancel) |
+| message   | [MessageForCancel](/docs/core-specification/schema-reference/messageforcancel) |
 
 ## Response
 

@@ -1,17 +1,21 @@
-# On Cancel
+---
+title: On Update
+order: 8
+---
 
-> Send cancellation request_id with reasons list in case of cancellation
-> request. Else send cancelled order object
+# On Update
+
+> Returns updated service with updated runtime object
 
 ## Overview
 
-> The BPP will send the cancelled order object to the BAP.
+> The BPP will send the updated order object to the BAP.
 
 ## Request
 
 ### URL
 
-> /on_cancel
+> /on_update
 
 ### Method
 
@@ -21,8 +25,8 @@
 
 | **Field** | **Type**                                                                             |
 | --------- | ------------------------------------------------------------------------------------ |
-| context\* | [ContextForOn_cancel](/docs/core-specification/schema-reference/contextforon_cancel) |
-| message   | [MessageForOn_cancel](/docs/core-specification/schema-reference/messageforon_cancel) |
+| context\* | [ContextForOn_update](/docs/core-specification/schema-reference/contextforon_update) |
+| message   | [MessageForOn_update](/docs/core-specification/schema-reference/messageforon_update) |
 | error     | [Error](/docs/core-specification/schema-reference/error)                             |
 
 ## Response

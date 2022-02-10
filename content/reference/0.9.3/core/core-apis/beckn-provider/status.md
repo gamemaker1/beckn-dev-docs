@@ -1,16 +1,21 @@
-# Search
+---
+title: Status
+order: 5
+---
 
-> Search for services by intent
+# Status
+
+> Fetch the latest order object
 
 ## Overview
 
-> The BAP will send the search intent to the BPP for services
+> The BAP will send the order id to get the latest status of the order
 
 ## Request
 
 ### URL
 
-> /search
+> /status
 
 ### Method
 
@@ -20,8 +25,8 @@
 
 | **Field** | **Type**                                                                       |
 | --------- | ------------------------------------------------------------------------------ |
-| context\* | [ContextForSearch](/docs/core-specification/schema-reference/contextforsearch) |
-| message   | [MessageForSearch](/docs/core-specification/schema-reference/messageforsearch) |
+| context\* | [ContextForStatus](/docs/core-specification/schema-reference/contextforstatus) |
+| message   | [MessageForStatus](/docs/core-specification/schema-reference/messageforstatus) |
 
 ## Response
 

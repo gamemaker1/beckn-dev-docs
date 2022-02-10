@@ -1,16 +1,22 @@
-# On Select
+---
+title: On Cancel
+order: 7
+---
 
-> Send draft order object with quoted price for selected items
+# On Cancel
+
+> Send cancellation request_id with reasons list in case of cancellation
+> request. Else send cancelled order object
 
 ## Overview
 
-> The BPP will send the draft order with the quoted price to the BAP.
+> The BPP will send the cancelled order object to the BAP.
 
 ## Request
 
 ### URL
 
-> /on_select
+> /on_cancel
 
 ### Method
 
@@ -20,8 +26,8 @@
 
 | **Field** | **Type**                                                                             |
 | --------- | ------------------------------------------------------------------------------------ |
-| context\* | [ContextForOn_select](/docs/core-specification/schema-reference/contextforon_select) |
-| message   | [MessageForOn_select](/docs/core-specification/schema-reference/messageforon_select) |
+| context\* | [ContextForOn_cancel](/docs/core-specification/schema-reference/contextforon_cancel) |
+| message   | [MessageForOn_cancel](/docs/core-specification/schema-reference/messageforon_cancel) |
 | error     | [Error](/docs/core-specification/schema-reference/error)                             |
 
 ## Response

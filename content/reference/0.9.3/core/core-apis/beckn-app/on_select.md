@@ -1,16 +1,21 @@
-# On Rating
+---
+title: On Select
+order: 2
+---
 
-> Provide feedback on a service
+# On Select
+
+> Send draft order object with quoted price for selected items
 
 ## Overview
 
-> The BPP will send the feecback object to the BAP.
+> The BPP will send the draft order with the quoted price to the BAP.
 
 ## Request
 
 ### URL
 
-> /on_rating
+> /on_select
 
 ### Method
 
@@ -20,8 +25,8 @@
 
 | **Field** | **Type**                                                                             |
 | --------- | ------------------------------------------------------------------------------------ |
-| context\* | [ContextForOn_rating](/docs/core-specification/schema-reference/contextforon_rating) |
-| message   | [MessageForOn_rating](/docs/core-specification/schema-reference/messageforon_rating) |
+| context\* | [ContextForOn_select](/docs/core-specification/schema-reference/contextforon_select) |
+| message   | [MessageForOn_select](/docs/core-specification/schema-reference/messageforon_select) |
 | error     | [Error](/docs/core-specification/schema-reference/error)                             |
 
 ## Response

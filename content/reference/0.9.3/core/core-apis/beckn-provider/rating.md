@@ -1,3 +1,8 @@
+---
+title: Rating
+order: 9
+---
+
 # Rating
 
 > Provide feedback on a service.

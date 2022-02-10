@@ -1,17 +1,22 @@
-# Support
+---
+title: On Init
+order: 3
+---
 
-> Contact support
+# On Init
+
+> Send order object with payment details updated
 
 ## Overview
 
-> The BAP will send the id of an entity for which support is required from the
-> BPP.
+> The BPP will send the draft order with the payment and fulfilment terms to the
+> BAP.
 
 ## Request
 
 ### URL
 
-> /support
+> /on_init
 
 ### Method
 
@@ -21,8 +26,9 @@
 
 | **Field** | **Type**                                                                         |
 | --------- | -------------------------------------------------------------------------------- |
-| context\* | [ContextForSupport](/docs/core-specification/schema-reference/contextforsupport) |
-| message   | [MessageForSupport](/docs/core-specification/schema-reference/messageforsupport) |
+| context\* | [ContextForOn_init](/docs/core-specification/schema-reference/contextforon_init) |
+| message   | [MessageForOn_init](/docs/core-specification/schema-reference/messageforon_init) |
+| error     | [Error](/docs/core-specification/schema-reference/error)                         |
 
 ## Response
 

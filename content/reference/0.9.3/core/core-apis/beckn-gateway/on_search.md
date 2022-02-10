@@ -1,3 +1,8 @@
+---
+title: On Search
+order: 2
+---
+
 # On Search
 
 > Send catalog

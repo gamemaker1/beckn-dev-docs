@@ -1,17 +1,21 @@
-# Init
+---
+title: Search
+order: 1
+---
 
-> Initialize an order by providing billing and/or shipping details
+# Search
+
+> Search for services by intent
 
 ## Overview
 
-> The BAP will send the billing and/or shipping details the BPP to initialize
-> the order
+> The BAP will send the search intent to the BPP for services
 
 ## Request
 
 ### URL
 
-> /init
+> /search
 
 ### Method
 
@@ -19,10 +23,10 @@
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                   |
-| --------- | -------------------------------------------------------------------------- |
-| context\* | [ContextForInit](/docs/core-specification/schema-reference/contextforinit) |
-| message   | [MessageForInit](/docs/core-specification/schema-reference/messageforinit) |
+| **Field** | **Type**                                                                       |
+| --------- | ------------------------------------------------------------------------------ |
+| context\* | [ContextForSearch](/docs/core-specification/schema-reference/contextforsearch) |
+| message   | [MessageForSearch](/docs/core-specification/schema-reference/messageforsearch) |
 
 ## Response
 

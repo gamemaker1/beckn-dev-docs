@@ -1,16 +1,21 @@
-# Status
+---
+title: Track
+order: 6
+---
 
-> Fetch the latest order object
+# Track
+
+> Track an active order
 
 ## Overview
 
-> The BAP will send the order id to get the latest status of the order
+> The BAP will send the order id to get the tracking details of the order
 
 ## Request
 
 ### URL
 
-> /status
+> /track
 
 ### Method
 
@@ -18,10 +23,10 @@
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                       |
-| --------- | ------------------------------------------------------------------------------ |
-| context\* | [ContextForStatus](/docs/core-specification/schema-reference/contextforstatus) |
-| message   | [MessageForStatus](/docs/core-specification/schema-reference/messageforstatus) |
+| **Field** | **Type**                                                                     |
+| --------- | ---------------------------------------------------------------------------- |
+| context\* | [ContextForTrack](/docs/core-specification/schema-reference/contextfortrack) |
+| message   | [MessageForTrack](/docs/core-specification/schema-reference/messagefortrack) |
 
 ## Response
 

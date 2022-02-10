@@ -1,16 +1,21 @@
-# On Update
+---
+title: On Status
+order: 5
+---
 
-> Returns updated service with updated runtime object
+# On Status
+
+> Fetch the status of the order
 
 ## Overview
 
-> The BPP will send the updated order object to the BAP.
+> The BPP will send the order object with current status to the BAP.
 
 ## Request
 
 ### URL
 
-> /on_update
+> /on_status
 
 ### Method
 
@@ -20,8 +25,8 @@
 
 | **Field** | **Type**                                                                             |
 | --------- | ------------------------------------------------------------------------------------ |
-| context\* | [ContextForOn_update](/docs/core-specification/schema-reference/contextforon_update) |
-| message   | [MessageForOn_update](/docs/core-specification/schema-reference/messageforon_update) |
+| context\* | [ContextForOn_status](/docs/core-specification/schema-reference/contextforon_status) |
+| message   | [MessageForOn_status](/docs/core-specification/schema-reference/messageforon_status) |
 | error     | [Error](/docs/core-specification/schema-reference/error)                             |
 
 ## Response

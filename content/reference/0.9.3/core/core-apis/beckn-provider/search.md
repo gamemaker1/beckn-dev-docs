@@ -1,16 +1,21 @@
-# Select
+---
+title: Search
+order: 1
+---
 
-> Select items from the catalog and build your order
+# Search
+
+> Search for services by intent
 
 ## Overview
 
-> The BAP will send items to the BPP to build the order
+> The BAP will send the search intent to the BPP for services
 
 ## Request
 
 ### URL
 
-> /select
+> /search
 
 ### Method
 
@@ -20,8 +25,8 @@
 
 | **Field** | **Type**                                                                       |
 | --------- | ------------------------------------------------------------------------------ |
-| context\* | [ContextForSelect](/docs/core-specification/schema-reference/contextforselect) |
-| message   | [MessageForSelect](/docs/core-specification/schema-reference/messageforselect) |
+| context\* | [ContextForSearch](/docs/core-specification/schema-reference/contextforsearch) |
+| message   | [MessageForSearch](/docs/core-specification/schema-reference/messageforsearch) |
 
 ## Response
 

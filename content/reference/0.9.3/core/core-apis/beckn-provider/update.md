@@ -1,17 +1,22 @@
-# Confirm
+---
+title: Update
+order: 8
+---
 
-> Confirms an order by agreeing to the terms of the order.
+# Update
+
+> Update an order.
 
 ## Overview
 
-> The BAP will send the confirm request to the BPP after agreeing to the payment
-> and fulfilment terms sent by the BPP.
+> The BAP will send the update request to the BPP with the details of which
+> parts of the order is to be updated and the updated values.
 
 ## Request
 
 ### URL
 
-> /confirm
+> /update
 
 ### Method
 
@@ -19,10 +24,10 @@
 
 ### Request Body Schema
 
-| **Field** | **Type**                                                                         |
-| --------- | -------------------------------------------------------------------------------- |
-| context\* | [ContextForContext](/docs/core-specification/schema-reference/contextforcontext) |
-| message   | [MessageForConfirm](/docs/core-specification/schema-reference/messageforconfirm) |
+| **Field** | **Type**                                                                       |
+| --------- | ------------------------------------------------------------------------------ |
+| context\* | [ContextForUpdate](/docs/core-specification/schema-reference/contextforupdate) |
+| message   | [MessageForUpdate](/docs/core-specification/schema-reference/messageforupdate) |
 
 ## Response
 

@@ -1,16 +1,21 @@
-# On Status
+---
+title: On Rating
+order: 9
+---
 
-> Fetch the status of the order
+# On Rating
+
+> Provide feedback on a service
 
 ## Overview
 
-> The BPP will send the order object with current status to the BAP.
+> The BPP will send the feecback object to the BAP.
 
 ## Request
 
 ### URL
 
-> /on_status
+> /on_rating
 
 ### Method
 
@@ -20,8 +25,8 @@
 
 | **Field** | **Type**                                                                             |
 | --------- | ------------------------------------------------------------------------------------ |
-| context\* | [ContextForOn_status](/docs/core-specification/schema-reference/contextforon_status) |
-| message   | [MessageForOn_status](/docs/core-specification/schema-reference/messageforon_status) |
+| context\* | [ContextForOn_rating](/docs/core-specification/schema-reference/contextforon_rating) |
+| message   | [MessageForOn_rating](/docs/core-specification/schema-reference/messageforon_rating) |
 | error     | [Error](/docs/core-specification/schema-reference/error)                             |
 
 ## Response
