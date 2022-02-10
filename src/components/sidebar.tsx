@@ -71,23 +71,23 @@ export const Sidebar = () => (
 							relativePath
 						}
 					}
-					allFile(
-						sort: {
-							order: ASC
-							fields: childMarkdownRemark___frontmatter___order
-						}
-					) {
-						edges {
-							node {
-								id
-								name
-								relativeDirectory
-								relativePath
-								childMarkdownRemark {
-									frontmatter {
-										title
-										order
-									}
+				}
+				allFile(
+					sort: {
+						order: ASC
+						fields: childMarkdownRemark___frontmatter___order
+					}
+				) {
+					edges {
+						node {
+							id
+							name
+							relativeDirectory
+							relativePath
+							childMarkdownRemark {
+								frontmatter {
+									title
+									order
 								}
 							}
 						}
