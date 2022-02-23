@@ -70,6 +70,6 @@
 		"endOfLine": "lf"
 	},
 	"lint-staged": {
-		"*": "prettier --write"
+		"**/*.{md,mdx,json,yaml,ts,tsx,js,jsx}": "prettier --write"
 	}
 }
