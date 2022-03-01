@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_beckn_developer_documentation=self.webpackChunk_beckn_developer_documentation||[]).push([[317],{5050:function(e,n,t){t.r(n);var u=t(7689);n.default=function(){return u.createElement("div",null,"Todo")}}}]);
+//# sourceMappingURL=component---src-pages-projects-tsx-d5af507cd62f263783f1.js.map

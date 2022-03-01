@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_beckn_developer_documentation=self.webpackChunk_beckn_developer_documentation||[]).push([[218],{3370:function(e,n,t){t.r(n);var l=t(7689),o=t(2582);n.default=function(){return l.createElement("div",null,l.createElement("h1",null,"404"),l.createElement("p",null,"We couldn't find the page you are looking for.",l.createElement(o.Link,{to:"/overview"},"Click here")," to go back home."))}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-ed534a48000c42cddef5.js.map
