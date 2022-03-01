@@ -61,7 +61,7 @@ export const Sidebar = () => (
 	<StaticQuery
 		// Make a query to retrieve all files and subdirectories in the `content/` folder
 		query={graphql`
-			query MyQuery {
+			query SidebarPagesQuery {
 				allDirectory {
 					edges {
 						node {

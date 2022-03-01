@@ -11,7 +11,6 @@ const HomePage = () => {
 		<div align="center" style={{ padding: 80 }}>
 			<p
 				style={{
-					color: 'cyan',
 					fontSize: 50,
 					fontWeight: 'bold',
 				}}

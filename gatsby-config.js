@@ -6,6 +6,7 @@ const config = {
 		title: 'Beckn Developer Documentation',
 	},
 	plugins: [
+		`gatsby-plugin-pnpm`,
 		`gatsby-plugin-typescript`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-json`,
