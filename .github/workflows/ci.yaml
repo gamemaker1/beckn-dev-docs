@@ -1,43 +1,53 @@
-# /.github/workflows/ci.yaml
-# GitHub actions workflow
+# .github/workflow/ci.yaml
+# CI configuration file that tells GitHub what to do when a commit is pushed.
 
 name: CI
 
+# Run the job whenever a commit is pushed to any branch
 on: [push, pull_request]
 
 jobs:
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2
-      - name: Setup Node 16
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-          cache: npm
-      - name: Check for lint/formatting errors
-        run: |
-          npm ci
-          npm run lint
+  # This job checks if the site builds succesfully
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
+      - name: Clone repository
         uses: actions/checkout@v2
+      - name: Setup PNPM 6
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.32.2
+      - name: Setup Node 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build the project
+        run: pnpm compile
+  # This job checks if there are any lint issues in the code
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+      - name: Setup PNPM 6
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.32.2
       - name: Setup Node 16
         uses: actions/setup-node@v2
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org/
-          cache: npm
-      - name: Build the site
-        run: |
-          npm ci
-          npm run build
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Lint code
+        run: pnpm lint
+  # This job deploys the site to GitHub Pages
   deploy:
     name: Deploy
     needs: [lint, build]
