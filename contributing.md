@@ -16,6 +16,7 @@ First, you need to install and be familiar the following:
   if you are on MacOS or Linux. Make sure you are using the
   [active LTS version](https://github.com/nodejs/Release#release-schedule) of
   Node.
+- `pnpm`: [This guide](https://pnpm.io/installation) will help you install PNPM.
 
 Once you have installed the above, follow
 [these instructions](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
@@ -51,7 +52,13 @@ While naming your branch, try to follow the below guidelines:
    - `docs`: For any documentation related changes.
 2. Make the branch name short but self-explanatory.
 
-Once you have created a branch, you can start coding!
+Once you have created a branch, install all dependencies:
+
+```sh
+> pnpm install
+```
+
+Once you have installed all dependencies, you can begin coding!
 
 The site has been created using [Gatsby](https://gatsbyjs.com) and is written in
 [Typescript](https://github.com/microsoft/TypeScript#readme). The code is
@@ -100,8 +107,8 @@ beckn-dev-docs
 ├── gatsby-config.js
 ├── gatsby-node.js
 ├── license.md
-├── package-lock.json
 ├── package.json
+├── pnpm-lock.yaml
 ├── readme.md
 └── tsconfig.json
 ```
@@ -111,7 +118,7 @@ beckn-dev-docs
 #### `./`
 
 - `package.json`: Node package information.
-- `package-lock.json`: npm lock file, please do not modify manually.
+- `pnpm-lock.yaml`: PNPM lock file, please do not modify manually.
 - `tsconfig.json`: The Typescript configuration for this project.
 - `contributing.md`: This file, helps contributors get started.
 - `license.md`: Tells people how they can use the code and the docs content.
@@ -142,10 +149,11 @@ beckn-dev-docs
 
 Modify the code as you please!
 
-Once you have made your changes, please ensure the linter reports no errors and
-the site builds without errors. You can run the linter using `npm run lint`,
-build the site by running `npm run build` and try to automatically fix most lint
-issues by running `npm run format`.
+Once you have made your changes, please ensure the linter reports no errors, the
+site builds without errors and all tests pass. You can run the linter using
+`pnpm lint`, build the site by running `pnpm compile`, run the tests by running
+`pnpm test` and try to automatically fix most lint issues by running
+`pnpm format`.
 
 Once you have made changes to the code, you will want to
 [`commit`](https://github.com/git-guides/git-commit) (basically, Git's version
