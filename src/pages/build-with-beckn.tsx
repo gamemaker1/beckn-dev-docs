@@ -1,14 +1,12 @@
 // src/pges/build-with-beckn.tsx
 // The advanced search pge that allows readers to find content based on language, area, spec version, tags, etc.
 
-import 'antd/lib/menu/style/css'
-
 import * as React from 'react'
+
 import { graphql, StaticQuery, Link } from 'gatsby'
 import { Menu, Select, Row, Col } from 'antd'
 
-const createLinkToFile = (path: string): string =>
-	path.replace(/\.mdx?$/, '').replace(/index$/, '')
+import { createLinkToFile } from '../gatsby/util'
 
 // The page
 export const BuildWithBecknPage = () => (

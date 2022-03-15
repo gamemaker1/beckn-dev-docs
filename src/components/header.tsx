@@ -1,7 +1,8 @@
 // src/components/header.tsx
 // The header component on each page
 
-import React, { Component } from 'react'
+import * as React from 'react'
+
 import { Link } from 'gatsby'
 import { Button, Menu, Row, Col } from 'antd'
 

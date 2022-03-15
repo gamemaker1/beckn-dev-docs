@@ -2,19 +2,19 @@
 // The page that displays projects using the Beckn Protocol.
 
 import * as React from 'react'
-import { Link } from 'gatsby'
+
+import { StaticQuery, Link, graphql } from 'gatsby'
+import { Layout, Row, Col } from 'antd'
+
 import { ProjectCard } from '../components/project-card'
-import { StaticQuery, graphql } from 'gatsby'
 import { Sidebar } from '../components/sidebar'
 import { Header } from '../components/header'
-import { Layout, Row, Col } from 'antd'
+
+import { createLinkToFile } from '../gatsby/util'
 
 const { Sider, Content } = Layout
 
-const createLinkToFile = (path: string): string =>
-	path.replace(/\.mdx?$/, '').replace(/index$/, '')
-
-const ProjectsPage = ({ children }: React.PropsWithChildren<{}>) => {
+const ProjectsPage = () => {
 	return (
 		<StaticQuery
 			query={graphql`

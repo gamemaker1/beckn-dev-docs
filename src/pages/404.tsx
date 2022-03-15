@@ -2,6 +2,7 @@
 // The default 404 page of the website.
 
 import * as React from 'react'
+
 import { Link } from 'gatsby'
 
 const NotFoundPage = () => {

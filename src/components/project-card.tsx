@@ -1,11 +1,11 @@
 // src/components/project-card.tsx
 // The card showing a project on the Projects page.
 
-import { Card } from 'antd'
-import React, { Component } from 'react'
-import { FileSearchOutlined, ArrowRightOutlined } from '@ant-design/icons'
-import { Button } from 'antd'
+import * as React from 'react'
+
+import { Card, Button } from 'antd'
 import { Link } from 'gatsby'
+import { FileSearchOutlined, ArrowRightOutlined } from '@ant-design/icons'
 
 // An object representing a project to render
 interface Project {
