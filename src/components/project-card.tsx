@@ -1,25 +1,31 @@
+// src/components/project-card.tsx
+// The card showing a project on the Projects page.
+
 import { Card } from 'antd'
 import React, { Component } from 'react'
 import { FileSearchOutlined, ArrowRightOutlined } from '@ant-design/icons'
 import { Button } from 'antd'
 import { Link } from 'gatsby'
 
-export const ProjectCard = (props: any) => {
-	const { title, description } = props
-	const createLinkToFile = (path: string): string =>
-		`/projects/${path.toLowerCase().replace(/\s/g, '-')}`
+// An object representing a project to render
+interface Project {
+	id: string
+	title: string
+	description?: string
+	link: string
+}
+
+export const ProjectCard = (project: Project) => {
 	return (
 		<Card>
 			<FileSearchOutlined />
-			<h2>{title}</h2>
-			<div>{description}</div>
-			<Link to={createLinkToFile(title)}>
-				<Button type="link">
+			<h2>{project.title}</h2>
+			<div>{project.description}</div>
+			<Link to={project.link}>
+				<Button type="link" style={{ float: 'right' }}>
 					Continue Reading <ArrowRightOutlined />
 				</Button>
 			</Link>
 		</Card>
 	)
 }
-
-const styles = {}
