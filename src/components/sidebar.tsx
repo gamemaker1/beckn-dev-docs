@@ -1,13 +1,13 @@
 // src/components/sidebar.tsx
 // The sidebar component that allows a reader to pick a certain page.
 
-import 'antd/lib/menu/style/css'
-
 import * as React from 'react'
+
 import { graphql, StaticQuery, Link } from 'gatsby'
 import { Affix, Menu } from 'antd'
 
 import { pathPrefix } from '../../gatsby-config'
+import { createLinkToFile } from '../gatsby/util'
 
 // An object representing a page to show on the sidebar
 interface PageMenuItem {
@@ -24,8 +24,6 @@ interface SectionMenuItem {
 // The menu is a list of items - either pages or sections
 type MenuItem = PageMenuItem | SectionMenuItem
 
-const createLinkToFile = (path: string): string =>
-	path.replace(/\.mdx?$/, '').replace(/index$/, '')
 const isPageMenuItem = (item: MenuItem): item is PageMenuItem =>
 	typeof (item as PageMenuItem).link === 'string'
 
