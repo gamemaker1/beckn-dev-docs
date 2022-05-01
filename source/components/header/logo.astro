@@ -1,0 +1,15 @@
+---
+// source/components/header/logo.astro
+// The Beckn logo, shown on every page as part of the header
+
+import { siteDetails } from '@/metadata'
+
+const { size } = Astro.props
+---
+
+<img
+	class="logo"
+	width={size}
+	height={size}
+	{...siteDetails.logo}
+/>

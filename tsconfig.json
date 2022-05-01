@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"jsx": "preserve",
+		"strict": true,
+		"noUnusedLocals": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": "source/*"
+		}
+	},
+	"include": ["source/"],
+	"exclude": ["node_modules/"]
+}
