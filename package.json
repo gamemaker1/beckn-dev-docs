@@ -10,7 +10,8 @@
 		"preview": "astro --config config/astro.ts preview",
 		"lint": "prettier --check --ignore-path .gitignore .",
 		"format": "prettier --write --ignore-path .gitignore .",
-		"deploy": "firebase deploy --only hosting --project beckn-dev-docs"
+		"deploy": "firebase deploy --only hosting --project beckn-dev-docs",
+		"prepare": "run-s clean build"
 	},
 	"dependencies": {
 		"firebase-tools": "10.7.2",
