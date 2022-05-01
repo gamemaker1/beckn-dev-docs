@@ -1,4 +1,4 @@
-// Config/astro.ts
+// config/astro.ts
 // Astro configuration file
 
 import { defineConfig } from 'astro/config'
