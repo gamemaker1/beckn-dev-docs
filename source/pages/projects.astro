@@ -2,14 +2,10 @@
 // source/pages/projects.astro
 // A page that displays all the projects from `{content}/projects/`
 
-import { projects } from '@/metadata'
-import { siteDetails } from '@/metadata'
+import { siteDetails, projects } from '@/metadata'
 import BrowserMeta from '@/components/browser-meta.astro'
 import SeoData from '@/components/seo-data.astro'
 import Header from '@/components/header/index.astro'
-import PageContent from '@/components/page-content/index.astro'
-import LeftSidebar from '@/components/left-sidebar/index.astro'
-import RightSidebar from '@/components/right-sidebar/index.astro'
 
 // The relative URL of the page
 const currentPage = new URL(Astro.request.url).pathname
