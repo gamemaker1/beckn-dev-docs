@@ -16,7 +16,7 @@ const { content = {} } = Astro.props
 const currentPage = new URL(Astro.request.url).pathname
 // The path to the file, used to generate an edit link whereby a user can propose
 // changes on GitHub
-const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`
+const currentFile = `source/pages${currentPage.replace(/\/$/, '')}.md`
 const githubEditUrl =
 	siteDetails.github &&
 	`https://github.com/${siteDetails.github.repo}/edit/${siteDetails.github.branch}/${currentFile}`
